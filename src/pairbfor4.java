@@ -2,7 +2,7 @@
 
 public class pairbfor4 extends pairb {//未优化getposition方法//
     /*
-        pairbfor4是指形如AABC或ABBC或ABCC的序列
+        pairbfor4是指形如AABC或ABBC或ABCC或AABB的序列
      */
     int insert;
     public pairbfor4(){

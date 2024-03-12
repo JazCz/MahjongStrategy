@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cadf920b-6d9c-4f65-b1df-de35d676934e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/paixingfor6.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paixingfor5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paixingfor5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pairbfor5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/suggest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pairbfor4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pairbfor4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test_1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +46,9 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2dXeVCoqcMim4F0rR5aSycDR9ga" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -109,7 +113,7 @@
       <workItem from="1710159140043" duration="110000" />
       <workItem from="1710161637262" duration="643000" />
       <workItem from="1710214669810" duration="965000" />
-      <workItem from="1710219439439" duration="6305000" />
+      <workItem from="1710219439439" duration="11901000" />
     </task>
     <servers />
   </component>
