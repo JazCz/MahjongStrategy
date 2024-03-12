@@ -41,29 +41,6 @@ public class paixing {
         else return 0;
     }
     //检查手牌中是否有两个相邻，1为左相邻，0为不相邻，-1为右相邻，2为顺子//
-    public int getneighbor()
-    {
-        int cnt=0;
-        int[] arr=getarr();
-        for(int i=0;i<=8;i++)
-        {
-            if(i!=least-1&&i!=mid-1&&i!=max-1&&arr[i]!=0)
-                cnt=cnt+1;
-        }
-        return cnt;
-    }
-    //返回相邻牌的总数//
-    public void outneighbor(){
-        int[] arr =getarr();
-        System.out.print("相邻的牌有");
-        for(int i=0;i<=8;i++)
-        {
-            if(i!=least-1&&i!=mid-1&&i!=max-1&&arr[i]!=0)
-                System.out.print(arr[i]+" ");
-        }
-        System.out.println();
-    }
-    //输出相邻牌//
     public void value(){
         outpaixing();
         int[] value=getvalue();
@@ -75,97 +52,25 @@ public class paixing {
         arr[least-1]=least;
         arr[mid-1]=mid;
         arr[max-1]=max;
-        modifyleft(arr,least);
-        modifyright(arr,least);
-        modifyleft(arr,mid);
-        modifyright(arr,mid);
-        modifyleft(arr,max);
-        modifyright(arr,max);
         return arr;
     }
-    //数组与临近数组构造方法//
+    //数组构造方法//
     public int[] getvalue(){
-        int[] arr=new int[9];
-        arr[least-1]=least;
-        arr[mid-1]=mid;
-        arr[max-1]=max;
+        int[] arr=getarr();
         //初始化arr数组//
         int[] value={f1,f1*2,f1*3,f1*4,f1*5,f1*4,f1*3,f1*2, f1};//初始化value数组带防守因数//
         value[least-1]+=f7;
         value[mid-1]+=f7;
         value[max-1]+=f7;
-        /*if(leftneighbor(arr,mid-1)||rightneighbor(arr,mid-1))
-        {
-            if(arr[mid-1]+2==arr[max-1])
-            {
-                value[mid-1]+=f6;
-                value[max-1]+=f6;
-            }
-            if(arr[mid-1]-2==arr[least-1])
-            {
-                value[mid-1]+=f6;
-                value[least-1]+=f6;
-            }
-        }*/
         modifychown(arr,value,least,mid,max);
-        //设置卡张value//
-        /*if(leftneighbor(arr,least-1))
-        {arr[least-2]=least-1;
-            value[least-1]+=f2;
-        }*/
+        //设置卡张吃因数//
         modifyleft(arr,value,least);
-        /*if(rightneighbor(arr,least-1))
-        {arr[least]=least+1;
-            value[least-1]+=f2;}*/
         modifyright(arr,value,least);
-        /*if(leftneighbor(arr,mid-1))
-        {arr[mid-2]=mid-1;
-            value[mid-1]+=f2;}*/
         modifyleft(arr,value,mid);
-        /*if(rightneighbor(arr,mid-1))
-        {arr[mid]=mid+1;
-            value[mid-1]+=f2;}*/
         modifyright(arr,value,mid);
-        /*if(leftneighbor(arr,max-1))
-        {
-            arr[max-2]=max-1;
-            value[max-1]+=f2;}*/
         modifyleft(arr,value,max);
-        /*if(rightneighbor(arr,max-1)){
-            arr[max]=max+1;
-            value[max-1]+=f2;
-        }*/
         modifyright(arr,value,max);
         //设置邻近因数//
-        /*int check=checknow(least,mid,max);
-        switch (check) {
-            case 1: {
-                if(least==1)
-                {
-                    value[least-1]+=f3;
-                    value[least]+=f3;
-                }
-                else {
-                    value[least-1]+=f4;
-                    value[least]+=f4;
-                }
-                break;
-            }
-            case 0:{
-                break;
-            }
-            case -1:{
-                if(max==9){
-                    value[max-1]+=f3;
-                    value[max-2]+=f3;
-                }
-                else {
-                    value[max-1]+=f4;
-                    value[max-2]+=f4;
-                }
-                break;
-            }
-        }*/
         modifychowp(value,least,mid,max);
         //设置顺子吃因数，区分边张//
         return value;
@@ -207,24 +112,14 @@ public class paixing {
     //检查index右边是否有位置//
     public void modifyleft(int[] array, int[] val,int num){
         if(leftneighbor(array,num-1))
-        {array[num-2]=num-1;
+        {
             val[num-1]+=f2;
-        }
-    }
-    public void modifyleft(int[] array,int num){
-        if(leftneighbor(array,num-1))
-        {array[num-2]=num-1;
         }
     }
     public void modifyright(int[] array, int[] val,int num){
         if(rightneighbor(array,num-1))
-        {array[num]=num+1;
+        {
             val[num-1]+=f2;
-        }
-    }
-    public void modifyright(int[] array, int num){
-        if(rightneighbor(array,num-1))
-        {array[num]=num+1;
         }
     }
     public void modifychowp(int[]val,int left, int mid, int right){

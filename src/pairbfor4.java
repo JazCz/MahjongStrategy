@@ -1,6 +1,6 @@
 
 
-public class pairbfor4 extends pairb {
+public class pairbfor4 extends pairb {//未优化getposition方法//
     /*
         pairbfor4是指形如AABC或ABBC或ABCC的序列
      */
@@ -71,20 +71,11 @@ public class pairbfor4 extends pairb {
         arr[pair-1]=pair;
         arr[max-1]=max;
         arr[insert-1]=insert;
-        modifyleft(arr,pair-1);
-        modifyright(arr,pair-1);
-        modifyleft(arr,max-1);
-        modifyright(arr,max-1);
-        modifyleft(arr,insert-1);
-        modifyright(arr,insert-1);
         return arr;
     }
     //重写arr数组方法//
     public int[] getvalue(){
-        int[] arr=new int[9];
-        arr[pair-1]=pair;
-        arr[max-1]=max;
-        arr[insert-1]=insert;
+        int[] arr=getarr();
         int[] value={f1,f1*2,f1*3,f1*4,f1*5,f1*4,f1*3,f1*2, f1};
         modifyleft(arr,value,insert);
         modifyright(arr,value,insert);

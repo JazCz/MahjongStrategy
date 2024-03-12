@@ -2,10 +2,11 @@
 import java.util.ArrayList;
 public class test_1 {
         public static void main(String[] args) {
-            ArrayList<paixing> list1=getpxlist();//创建全排集合//
-            ArrayList<pairb> list2=getpblist();//创建带对集合//
-            ArrayList<paixingfor4> list3=getpx4list();
-            ArrayList<pairbfor4> list4=getpb4list();
+            ArrayList<paixing> list1=getpxlist();//创建ABC集合//
+            ArrayList<pairb> list2=getpblist();//创建AAB集合//
+            ArrayList<paixingfor4> list3=getpx4list();//创建ABCD集合//
+            ArrayList<pairbfor4> list4=getpb4list();//创建AABC或AABB集合//
+            ArrayList<paixingfor5> list5=getpx5list();//创建ABCDE集合//
             //遍历//
             for (paixing paixing : list1)
             {
@@ -25,6 +26,11 @@ public class test_1 {
             {
                 pairbfor4.value();
                 pairbfor4.drop();
+            }
+            for (paixingfor5 paixingfor5:list5)
+            {
+                paixingfor5.value();
+                paixingfor5.drop();
             }
         }
     public static ArrayList<paixing> getpxlist(){
@@ -74,7 +80,7 @@ public class test_1 {
                     else {
                         for (int l = 1; l <=9 ; l++) {
                             paixingfor4 pxf4=new paixingfor4(i,j,k,l);
-                            if(l!=i&&l!=j&&l!=k&&pxf4.check(l))
+                            if(l!=i&&l!=j&&l!=k&&pxf4.check())
                             {
                                 list.add(pxf4);
                                 }
@@ -105,5 +111,34 @@ public class test_1 {
         return list;
     }
     //循环遍历带对的排列后多一张的排列 //
+    public static ArrayList<paixingfor5> getpx5list(){
+        ArrayList<paixingfor5> list=new ArrayList<>();
+        for(int i=1;i<=7;i++)
+        {
+            for(int j=i+1;j<=8;j++)
+            {
+                for(int k=j+1;k<=9;k++)
+                {
+                    if(i+1==j&&j+1==k){
+                        continue;
+                    }
+                    else {
+                        for (int l = 1; l <=9 ; l++) {
+                            paixingfor4 pxf4=new paixingfor4(i,j,k,l);
+                            if(l!=i&&l!=j&&l!=k&&pxf4.check()){
+                                for (int m = 1; m <=9 ; m++) {
+                                    paixingfor5 pxf5=new paixingfor5(i,j,k,l,m);
+                                    if(m!=i&&m!=j&&m!=k&&m!=l&&pxf5.check())
+                                        list.add(pxf5);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return list;
+    }
+    //循环遍历全排列后多一张的基础上再多一张的排列//
 }
 
