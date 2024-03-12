@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cadf920b-6d9c-4f65-b1df-de35d676934e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/paixingfor5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mahjong/pairb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mahjong/pairb.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mahjong/pairbfor4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mahjong/pairbfor4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mahjong/paixing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mahjong/paixing.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mahjong/paixingfor4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mahjong/paixingfor4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mahjong/test_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mahjong/test_1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pairb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pairb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pairbfor4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pairbfor4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paixing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paixing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paixingfor4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paixingfor4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paixingfor6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paixingfor5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paixingfor5.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test_1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +109,7 @@
       <workItem from="1710159140043" duration="110000" />
       <workItem from="1710161637262" duration="643000" />
       <workItem from="1710214669810" duration="965000" />
-      <workItem from="1710219439439" duration="4738000" />
+      <workItem from="1710219439439" duration="6305000" />
     </task>
     <servers />
   </component>
