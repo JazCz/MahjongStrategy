@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cadf920b-6d9c-4f65-b1df-de35d676934e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pairbfor5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/suggest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pairbfor4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pairbfor4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pairbfor5d1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mahjong/test_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mahjong/test_1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/suggest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/suggest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test_1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +114,7 @@
       <workItem from="1710159140043" duration="110000" />
       <workItem from="1710161637262" duration="643000" />
       <workItem from="1710214669810" duration="965000" />
-      <workItem from="1710219439439" duration="11901000" />
+      <workItem from="1710219439439" duration="14481000" />
     </task>
     <servers />
   </component>

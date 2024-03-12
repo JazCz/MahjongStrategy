@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 public class test_1 {
         public static void main(String[] args) {
@@ -9,6 +8,7 @@ public class test_1 {
             ArrayList<paixingfor5> list5=getpx5list();//创建ABCDE集合//
             ArrayList<paixingfor6> list6=getpx6list();//创建ABCDEF集合//
             ArrayList<pairbfor5> list7=getpb5list();
+            ArrayList<pairbfor5d1> list8=getpb5d1list();
             //策略穷举//
             /*for (paixing paixing : list1)
             {
@@ -44,6 +44,11 @@ public class test_1 {
                 paixingfor6.value();
                 paixingfor6.drop();
             }*/
+            for (pairbfor5d1 pairbfor5d1:list8)
+            {
+                pairbfor5d1.value();
+                pairbfor5d1.drop();
+            }
         }
     public static ArrayList<paixing> getpxlist(){
         ArrayList<paixing> list=new ArrayList<>();
@@ -158,7 +163,7 @@ public class test_1 {
         {
             for(int j=1;j<=9;j++)
             {
-                if(i!=j)
+                if(j!=i)
                 {
                     for (int k = 1; k <=9 ; k++) {
                         if(j==k)
@@ -169,6 +174,32 @@ public class test_1 {
                                     pairbfor5 pbf5=new pairbfor5(i,j,l);
                                     if(pbf5.check()&&l!=i&&l!=j)
                                         list.add(pbf5);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return list;
+    }
+    public static ArrayList<pairbfor5d1> getpb5d1list(){
+        ArrayList<pairbfor5d1> list=new ArrayList<>();
+        for(int i=1;i<=8;i++)
+        {
+            for(int j=1;j<=9;j++)
+            {
+                if(j!=i)
+                {
+                    for (int k = 1; k <=9 ; k++) {
+                        if(k!=j)
+                        {
+                            pairbfor4 pbf4=new pairbfor4(i,j,k);
+                            if(i!=k&&pbf4.check(k)){
+                                for (int l = 1; l <=9 ; l++) {
+                                    pairbfor5d1 pbf5d1=new pairbfor5d1(i,j,k,l);
+                                    if(pbf5d1.check()&&l!=i&&l!=j&&l!=k)
+                                        list.add(pbf5d1);
                                 }
                             }
                         }
