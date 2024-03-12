@@ -86,6 +86,7 @@ public class pairb extends paixing{
         arr[max-1]=max;
         int[] value={f1,f1*2,f1*3,f1*4,f1*5,f1*4,f1*3,f1*2, f1};
         value[pair-1]+=f5;//设置碰的因数//
+        value[max-1]+=f7;
         /*if(leftneighbor(arr,pair-1)||rightneighbor(arr,pair-1))
         {
             if(arr[pair-1]+2==arr[max-1])

@@ -13,6 +13,8 @@ public class paixing {
     //设置一般顺子（吃）的因数f4//
     public static final int f6=1;
     //设置卡张吃的因数f6//
+    public static final int f7=1;
+    //设置凑对子的因数f7//
     int least;//最小牌//
     int mid;//中间牌//
     int max;//最大牌//
@@ -89,6 +91,9 @@ public class paixing {
         arr[max-1]=max;
         //初始化arr数组//
         int[] value={f1,f1*2,f1*3,f1*4,f1*5,f1*4,f1*3,f1*2, f1};//初始化value数组带防守因数//
+        value[least-1]+=f7;
+        value[mid-1]+=f7;
+        value[max-1]+=f7;
         /*if(leftneighbor(arr,mid-1)||rightneighbor(arr,mid-1))
         {
             if(arr[mid-1]+2==arr[max-1])

@@ -85,6 +85,10 @@ public class paixingfor4 extends paixing{
         arr[insert-1]=insert;
         //初始化arr数组//
         int[] value={f1,f1*2,f1*3,f1*4,f1*5,f1*4,f1*3,f1*2, f1};//初始化value数组带防守因数//
+        value[least-1]+=f7;
+        value[mid-1]+=f7;
+        value[max-1]+=f7;
+        value[insert-1]+=f7;
         modifychownfor4(arr,value,insert,least,mid,max);
         //设置卡张value//
         /*if(leftneighbor(arr,least-1))

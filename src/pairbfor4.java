@@ -100,6 +100,8 @@ public class pairbfor4 extends pairb {
         else {//insert!=max,eg1134,pair=1,insert=3,max=4//
             //value算法和paixing相同//
             value[pair-1]+=f5;
+            value[insert-1]+=f7;
+            value[max-1]+=f7;
             modifyleft(arr,value,max);
             modifyright(arr,value,max);
             modifychowpfor4(value,insert,pair,max);
