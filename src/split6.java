@@ -48,7 +48,7 @@ public class split6 extends split{
     public void checknmodify(){
         for (int i = 0; i < lsp1.size(); i++) {
             for (int j = 0; j < lsp2.size(); j++) {
-                if(Objects.equals(lsp1.get(i), lsp2.get(j)))
+                if(Objects.equals(lsp1.get(i), lsp2.get(j))&&i!=j)
                 {
                     lsp2.remove(lsp2.get(j));
                     lsp1.remove(lsp1.get(j));
@@ -118,8 +118,12 @@ public class split6 extends split{
                 paixing px2;
                 pairb pb2;
                 j=0;
-                for (int k1 = 0; k1 < t1t.length; k1++) {
-                    int p1=ispair(t1,t1t[k1]);
+                int p1=-1;
+                int p2=-1;
+                for (int k1 = 0; k1 < t1t.length; k1++)
+                    {
+                        p1=ispair(t1,t1t[k1]);
+                    }//t==t1t?//
                     if(p1!=-1){
                         for (int l = 0; l < t1t.length; l++) {
                             if(t1t[l]!=p1)
@@ -131,15 +135,15 @@ public class split6 extends split{
                         }
                     }
                     else {
-                        if(k1==0){
-                            px1= new paixing(t1[k1],t1[k1+1],t1[k1+2]);
+                            px1= new paixing(t1[0],t1[1],t1[2]);
                             px1.outpaixing();
                             val[0]=px1.dropvalue();
-                        }
                     }
-                }
-                for (int k2 = 0; k2 < t2t.length; k2++) {
-                    int p2=ispair(t2,t2t[k2]);//记录pair//
+                for (int k2 = 0; k2 < t2t.length; k2++)
+                    {
+                        p2=ispair(t2,t2t[k2]);
+                    }
+                    //记录pair//
                     if(p2!=-1){
                         for (int l = 0; l < t2t.length; l++) {
                             if(t2t[l]!=p2)
@@ -151,19 +155,16 @@ public class split6 extends split{
                         }
                     }
                     else {
-                        if(k2==0)
-                        {
-                            px2=new paixing(t2[k2],t2[k2+1],t2[k2+2]);
+                            px2=new paixing(t2[0],t2[1],t2[2]);
                             px2.outpaixing();
                             val[2]= px2.dropvalue();
-                        }
                     }
-                }
                 t[(i+1)/3-1]=findmin(whichn0(val[0],val[1]),whichn0(val[2],val[3]));
                 Arrays.fill(val,0);
                 System.out.println();
             }
         }
+        System.out.println("价值最小的牌型是:");
         int min=0;
         for (int i = 1; i <t.length ; i++) {
             if(t[i]<t[min])
@@ -186,8 +187,12 @@ public class split6 extends split{
                 pairb pb1;
                 paixing px2;
                 pairb pb2;
-                for (int k1 = 0; k1 < t1t.length; k1++) {
-                    int p1 = ispair(t1, t1t[k1]);
+                int p1=-1;
+                int p2=-1;
+                for (int k1 = 0; k1 < t1t.length; k1++)
+                    {
+                        p1 = ispair(t1, t1t[k1]);
+                    }
                     if (p1 != -1) {
                         for (int l = 0; l < t1t.length; l++) {
                             if (t1t[l] != p1) {
@@ -197,17 +202,17 @@ public class split6 extends split{
                                 val[1] = pb1.dropvalue();
                             }
                         }
-                    } else {
-                        if (k1 == 0) {
-                            px1 = new paixing(t1[k1], t1[k1 + 1], t1[k1 + 2]);
+                    }
+                    else {
+                            px1 = new paixing(t1[0], t1[ 1], t1[2]);
                             listx.add(px1);
                             px1.outpaixing();
                             val[0] = px1.dropvalue();
-                        }
                     }
-                }
-                for (int k2 = 0; k2 < t2t.length; k2++) {
-                    int p2 = ispair(t2, t2t[k2]);//记录pair//
+                for (int k2 = 0; k2 < t2t.length; k2++)
+                    {
+                        p2 = ispair(t2, t2t[k2]);
+                    }//记录pair//
                     if (p2 != -1) {
                         for (int l = 0; l < t2t.length; l++) {
                             if (t2t[l] != p2) {
@@ -218,14 +223,11 @@ public class split6 extends split{
                             }
                         }
                     } else {
-                        if (k2 == 0) {
-                            px2 = new paixing(t2[k2], t2[k2 + 1], t2[k2 + 2]);
+                            px2 = new paixing(t2[0], t2[1], t2[2]);
                             listx.add(px2);
                             px2.outpaixing();
                             val[2] = px2.dropvalue();
-                        }
                     }
-                }
             }
             int index=0;
             for (int k = 0; k < val.length; k++) {
