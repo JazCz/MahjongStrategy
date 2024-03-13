@@ -72,6 +72,13 @@ public class pairb extends paixing{
         System.out.println("应当丢弃"+dropvalue+"这张牌"+"---");
     }
     //丢弃value最小的牌//
+    public int dropvalue()
+    {
+        int[]value=getvalue();
+        int dropvalue=findminfrom2(value,pair,max);
+        return value[dropvalue-1];
+    }
+    //给出最小value//
     public int findminfrom2(int[] value,int pair,int max){
         int tem1=compare2(value[pair-1],value[max-1]);
         int out;

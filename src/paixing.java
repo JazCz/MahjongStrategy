@@ -80,8 +80,14 @@ public class paixing {
         int[]value=getvalue();
         int dropvalue=findminfrom3(value,least,mid,max);
         System.out.println("应当丢弃"+dropvalue+"这张牌"+"---");
+    }//丢弃value最小的牌//
+    public int dropvalue()
+    {
+        int[]value=getvalue();
+        int dropvalue=findminfrom3(value,least,mid,max);
+        return value[dropvalue-1];
     }
-    //丢弃value最小的牌//
+    //给出最小value//
     public int findminfrom3(int[] value,int least,int mid,int max){
         int tem1=compare2(value[mid-1],value[max-1]);
         int tem2 = compare2(value[least - 1], value[mid - 1]);

@@ -39,16 +39,21 @@ public class test_1 {
                 pairbfor5.value();
                 pairbfor5.drop();
             }
-            for (paixingfor6 paixingfor6:list6)
-            {
-                paixingfor6.value();
-                paixingfor6.drop();
-            }*/
             for (pairbfor5d1 pairbfor5d1:list8)
             {
                 pairbfor5d1.value();
                 pairbfor5d1.drop();
             }
+            for (paixingfor6 paixingfor6:list6)
+            {
+                paixingfor6.value();
+                paixingfor6.drop();
+            }*/
+            String s=inrec.input();
+            System.out.println(inrec.recognize(s,1));
+            System.out.println(inrec.corres(s));
+            split6 spl6=new split6(inrec.recognize(s,1),inrec.corres(s));
+            spl6.getvalue();
         }
     public static ArrayList<paixing> getpxlist(){
         ArrayList<paixing> list=new ArrayList<>();
