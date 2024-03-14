@@ -5,9 +5,10 @@ public class split6 extends split{
     public split6(){
         super();
     }
-    public split6(String seq, String seqcor) {
+    public split6(String seq, String seqcor,String s) {
         super.seq=seq;
         super.seqcor=seqcor;
+        super.s=s;
         sb1=new StringBuilder();
         sb2=new StringBuilder();
         lsp1=new ArrayList<>();
@@ -45,17 +46,6 @@ public class split6 extends split{
         lsp1=removeDuplicates(rawlsp1);
         lsp2=removeDuplicates(rawlsp2);
     }
-    public void checknmodify(){
-        for (int i = 0; i < lsp1.size(); i++) {
-            for (int j = 0; j < lsp2.size(); j++) {
-                if(Objects.equals(lsp1.get(i), lsp2.get(j))&&i!=j)
-                {
-                    lsp2.remove(lsp2.get(j));
-                    lsp1.remove(lsp1.get(j));
-                }
-            }
-        }
-    }
     public void print(){
         split();
         checknmodify();
@@ -63,6 +53,7 @@ public class split6 extends split{
             System.out.print(s + " ");
         }
     }
+    //only for test//
     public void printnum(){
         split();
         checknmodify();
@@ -82,17 +73,7 @@ public class split6 extends split{
                 System.out.print(ilsp2.get(i)+" ");
         }
     }
-
-    public void getnum(){
-        for (int i = 0; i < lsp1.size(); i++) {
-                String s1=lsp1.get(i);
-                String s2=lsp2.get(i);
-            for (int j = 0; j <s1.length(); j++) {
-                ilsp1.add(readnum(getsingle(s1,j)));
-                ilsp2.add(readnum(getsingle(s2,j)));
-            }
-        }
-    }
+    //only for test//
     public void getvalue(){
         split();
         checknmodify();
@@ -241,16 +222,6 @@ public class split6 extends split{
         }
     }
     //print和本方法不能同时调用,因为都改变了类的变量
-    public int readch(char ch){
-        return 2*(ch-'A')+1;
-    }//返回字符ch在seqcor的索引
-    public int readnum(char ch){
-        return getsingle(seqcor,readch(ch)+1)-'0';
-    }//返回字符ch在seqcor代表的值//
-    public int findmin(int a, int b)
-    {
-        return Math.min(a, b);
-    }
     public int ispair(int[]arr,int pair)
     {
         int[] pos=new int[9];
@@ -262,46 +233,6 @@ public class split6 extends split{
         return -1;
     }
     //ispair只考虑了一个pair的情况,返回这个pair//
-    public int[] typeint(int[] arr){
-        int[] pos=new int[9];
-        int[] out=new int[3];
-        for (int k : arr) {
-            pos[k - 1]++;
-        }
-        int j=0;
-        for (int i = 0; i < pos.length; i++) {
-            if (pos[i]!=0)
-            {
-                out[j]=i+1;
-                j++;}
-        }
-        int[] outn=new int[j];//把多余的0全部清空//
-        System.arraycopy(out, 0, outn, 0, outn.length);
-        return outn;
-    }
-    //输出不重复出现的数字数组//
-    public char getsingle(String s,int index){
-        return s.charAt(index);
-    }
-    public int whichn0(int numx,int numb)
-    {
-        if(numx!=0)
-            return numx;
-        else
-            return numb;
-    }
-    //确保每次只获取单个字符//
-    public static <T> ArrayList<T> removeDuplicates(ArrayList<T> list) {
-            Set<T> set = new HashSet<>();
-            ArrayList<T> resultList = new ArrayList<>();
 
-            for (T element : list) {
-                if (!set.contains(element)) {
-                    set.add(element);
-                    resultList.add(element);
-                }
-            }
 
-            return resultList;
-        }
 }

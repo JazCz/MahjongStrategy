@@ -52,8 +52,8 @@ public class test_1 {
             String s=inrec.input();
             System.out.println(inrec.recognize(s,1));
             System.out.println(inrec.corres(s));
-            split6 spl6=new split6(inrec.recognize(s,1),inrec.corres(s));
-            spl6.getvalue();
+            split7 spl7=new split7(inrec.recognize(s,1),inrec.corres(s),s);
+            spl7.getvalue();
         }
     public static ArrayList<paixing> getpxlist(){
         ArrayList<paixing> list=new ArrayList<>();

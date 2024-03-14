@@ -6,7 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="cadf920b-6d9c-4f65-b1df-de35d676934e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mahjong/test_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mahjong/test_1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inrec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inrec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pairbfor4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pairbfor4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paixingfor4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paixingfor4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/split.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/split.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/split6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/split6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/split7.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/split7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/split8.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/split8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/split9.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/split9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/suggest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/suggest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test_1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,13 +102,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-f644763e9732-c0c073db" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -112,7 +115,12 @@
       <workItem from="1710161637262" duration="643000" />
       <workItem from="1710214669810" duration="965000" />
       <workItem from="1710219439439" duration="37218000" />
-      <workItem from="1710295370630" duration="17244000" />
+      <workItem from="1710295370630" duration="17493000" />
+      <workItem from="1710314158389" duration="3080000" />
+      <workItem from="1710340734541" duration="656000" />
+      <workItem from="1710341959223" duration="3591000" />
+      <workItem from="1710379471391" duration="460000" />
+      <workItem from="1710390393947" duration="19005000" />
     </task>
     <servers />
   </component>

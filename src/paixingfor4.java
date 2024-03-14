@@ -80,6 +80,17 @@ public class paixingfor4 extends paixing{
         }
         System.out.println("应当丢弃"+dropvalue+"这张牌"+"---");
     }
+    public int dropvalue(){
+        int[] value=getvalue();
+        int[] pos=sort(least,mid,max,insert,1);
+        int dropvalue=pos[0];
+        for (int i = 1; i < pos.length; i++) {
+            if(value[pos[i]-1]<value[dropvalue-1]){
+                dropvalue=pos[i];
+            }
+        }
+        return value[dropvalue-1];
+    }
     public boolean check(){
         int[] pos=sort(least,mid,max,insert,1);
         for (int i = 0; i <=1; i++) {

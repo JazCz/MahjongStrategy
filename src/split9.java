@@ -1,2 +1,2 @@
-public class split9 {
+public class split9 extends split{
 }

@@ -62,6 +62,7 @@ public class inrec {
         }
         return "当前手牌存在刻子或顺子";
     }
+    //mode为1时返回字母序列,mode为0时返回输入//
     public static String corres(String input)
     {
         String rec=recognize(input,1);

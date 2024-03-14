@@ -113,6 +113,18 @@ public class pairbfor4 extends pairb {//未优化getposition方法//
             System.out.println("应该丢弃"+dropvalue+"这张牌"+"---");
         }
     }
+    public int dropvalue(){
+        int[]value=getvalue();
+        int dropvalue;
+        if(doublepair())
+        {
+            dropvalue=findminfrom2(value,pair,max);
+        }
+        else {
+            dropvalue=findminfrom3(value,insert,pair,max);
+        }
+        return value[dropvalue-1];
+    }
     public boolean check(int insert){
         boolean flag =false;
         switch (getposition(insert,pair,max)){
