@@ -7,8 +7,8 @@ public class test_1 {
             ArrayList<pairbfor4> list4=getpb4list();//创建AABC或AABB集合//
             ArrayList<paixingfor5> list5=getpx5list();//创建ABCDE集合//
             ArrayList<paixingfor6> list6=getpx6list();//创建ABCDEF集合//
-            ArrayList<pairbfor5> list7=getpb5list();
-            ArrayList<pairbfor5d1> list8=getpb5d1list();
+            ArrayList<pairbfor5> list7=getpb5list();//创建AABBC集合//
+            ArrayList<pairbfor5d1> list8=getpb5d1list();//创建AABCD集合//
             //策略穷举//
             /*for (paixing paixing : list1)
             {
@@ -52,8 +52,11 @@ public class test_1 {
             String s=inrec.input();
             System.out.println(inrec.recognize(s,1));
             System.out.println(inrec.corres(s));
-            split7 spl7=new split7(inrec.recognize(s,1),inrec.corres(s),s);
-            spl7.getvalue();
+            //split7 spl7=new split7(inrec.recognize(s,1),inrec.corres(s),s);
+            //spl7.getvalue();
+            //spl7.print();
+            split8 spl8=new split8(inrec.recognize(s,1),inrec.corres(s),s);
+            spl8.print();
         }
     public static ArrayList<paixing> getpxlist(){
         ArrayList<paixing> list=new ArrayList<>();

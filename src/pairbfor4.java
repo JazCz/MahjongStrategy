@@ -8,7 +8,7 @@ public class pairbfor4 extends pairb {//未优化getposition方法//
     public pairbfor4(){
         super();
     }
-    public pairbfor4(int pair, int max,int insert){
+    public pairbfor4(int pair, int max,int insert){//pair必须是对子,不区分max和insert的序//
         super.pair=pair;
         super.max=max;
         this.insert=insert;

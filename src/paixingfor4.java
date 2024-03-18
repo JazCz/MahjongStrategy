@@ -9,7 +9,7 @@ public class paixingfor4 extends paixing{
     public paixingfor4(){
         super();
     }//无参构造//
-    public paixingfor4(int least,int mid, int max, int insert){
+    public paixingfor4(int least,int mid, int max, int insert){//可以无序构造//
         super.least=least;
         super.mid=mid;
         super.max=max;

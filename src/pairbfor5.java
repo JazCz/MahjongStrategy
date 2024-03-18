@@ -6,7 +6,7 @@ public class pairbfor5 extends pairbfor4{
     public pairbfor5(){
         super();
     }
-    public pairbfor5(int pair, int max, int insertc){
+    public pairbfor5(int pair, int max, int insertc){//pair必须是对子,不区分其他的序//
         super.pair=pair;
         super.max=max;
         this.insertc=insertc;
